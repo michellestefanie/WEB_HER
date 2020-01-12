@@ -283,7 +283,7 @@ main section .verhalen img {
   transition: all .6s;
 }
 
-main section .verhalen h3 {
+main section .verhalen span {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -303,13 +303,13 @@ main section .verhalen h3 {
   margin: .5em;
 }
 
-main section .verhalen h3:first-child {
+main section .verhalen span:first-child {
   border: none;
   padding: 0;
   margin-bottom: 5em;
 }
 
-main section .verhalen h3:nth-of-type(3n) {
+main section .verhalen h2 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -324,6 +324,26 @@ main section .verhalen h3:nth-of-type(3n) {
   transition-delay: .2s;
 }
 
+main section .verhalen p {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #99258d;
+  font-size: .8em;
+  font-weight: 500;
+  text-shadow: 0.0625em 0.0625em 0.1875em rgba(0, 0, 0, 0.3);
+  /* 1/16 */
+  /* 1/16 */
+  /* 3/16 */
+  margin-left: 1em;
+  opacity: 0;
+  transform: translateY(-0.625em);
+  /* 10/16 */
+  transition: all .5s;
+  transition-delay: .2s;
+  margin: .5em;
+}
+
 main section .verhalen img {
   display: grid;
   object-fit: cover;
@@ -334,7 +354,17 @@ main section .verhalen article:hover {
   background-color: rgb(255, 255, 255, 0.9);
 }
 
-main section .verhalen article:hover h3 {
+main section .verhalen article:hover span {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+main section .verhalen article:hover h2 {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+main section .verhalen article:hover p {
   opacity: 1;
   transform: translateY(0);
 }
@@ -371,7 +401,7 @@ main section .voorgesteldeVerhalen img {
   transition: all .6s;
 }
 
-main section .voorgesteldeVerhalen h3 {
+main section .voorgesteldeVerhalen span {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -391,13 +421,13 @@ main section .voorgesteldeVerhalen h3 {
   margin: .5em;
 }
 
-main section .voorgesteldeVerhalen h3:first-child {
+main section .voorgesteldeVerhalen span:first-child {
   border: none;
   padding: 0;
   margin-bottom: 5em;
 }
 
-main section .voorgesteldeVerhalen h3:nth-of-type(3n) {
+main section .voorgesteldeVerhalen h2 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -412,6 +442,26 @@ main section .voorgesteldeVerhalen h3:nth-of-type(3n) {
   transition-delay: .2s;
 }
 
+main section .voorgesteldeVerhalen p {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #99258d;
+  font-size: .8em;
+  font-weight: 500;
+  text-shadow: 0.0625em 0.0625em 0.1875em rgba(0, 0, 0, 0.3);
+  /* 1/16 */
+  /* 1/16 */
+  /* 3/16 */
+  margin-left: 1em;
+  opacity: 0;
+  transform: translateY(-0.625em);
+  /* 10/16 */
+  transition: all .5s;
+  transition-delay: .2s;
+  margin: .5em;
+}
+
 main section .voorgesteldeVerhalen img {
   display: grid;
   object-fit: cover;
@@ -422,7 +472,17 @@ main section .voorgesteldeVerhalen article:hover {
   background-color: rgb(255, 255, 255, 0.9);
 }
 
-main section .voorgesteldeVerhalen article:hover h3 {
+main section .voorgesteldeVerhalen article:hover span {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+main section .voorgesteldeVerhalen article:hover h2 {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+main section .voorgesteldeVerhalen article:hover p {
   opacity: 1;
   transform: translateY(0);
 }
@@ -459,7 +519,7 @@ main section .meestBekeken img {
   transition: all .6s;
 }
 
-main section .meestBekeken h3 {
+main section .meestBekeken span {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -479,13 +539,13 @@ main section .meestBekeken h3 {
   margin: .5em;
 }
 
-main section .meestBekeken h3:first-child {
+main section .meestBekeken span:first-child {
   border: none;
   padding: 0;
   margin-bottom: 5em;
 }
 
-main section .meestBekeken h3:nth-of-type(3n) {
+main section .meestBekeken h2 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -500,6 +560,26 @@ main section .meestBekeken h3:nth-of-type(3n) {
   transition-delay: .2s;
 }
 
+main section .meestBekeken p {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #99258d;
+  font-size: .8em;
+  font-weight: 500;
+  text-shadow: 0.0625em 0.0625em 0.1875em rgba(0, 0, 0, 0.3);
+  /* 1/16 */
+  /* 1/16 */
+  /* 3/16 */
+  margin-left: 1em;
+  opacity: 0;
+  transform: translateY(-0.625em);
+  /* 10/16 */
+  transition: all .5s;
+  transition-delay: .2s;
+  margin: .5em;
+}
+
 main section .meestBekeken img {
   display: grid;
   object-fit: cover;
@@ -510,7 +590,17 @@ main section .meestBekeken article:hover {
   background-color: rgb(255, 255, 255, 0.9);
 }
 
-main section .meestBekeken article:hover h3 {
+main section .meestBekeken article:hover span {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+main section .meestBekeken article:hover h2 {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+main section .meestBekeken article:hover p {
   opacity: 1;
   transform: translateY(0);
 }
@@ -569,7 +659,15 @@ footer img {
     margin: .5em;
   }
 
-  main section .verhalen h3 {
+  main section .verhalen span {
+    margin-left: 1em;
+  }
+
+  main section .verhalen h2 {
+    margin-left: 1em;
+  }
+
+  main section .verhalen p {
     margin-left: 1em;
   }
 
@@ -591,7 +689,15 @@ footer img {
     margin: .5em;
   }
 
-  main section .voorgesteldeVerhalen h3 {
+  main section .voorgesteldeVerhalen span {
+    margin-left: 1em;
+  }
+
+  main section .voorgesteldeVerhalen h2 {
+    margin-left: 1em;
+  }
+
+  main section .voorgesteldeVerhalen p {
     margin-left: 1em;
   }
 
@@ -614,9 +720,18 @@ footer img {
     margin: .5em;
   }
 
-  main section .meestBekeken h3 {
+  main section .meestBekeken span {
     margin-left: 1em;
   }
+
+  main section .meestBekeken h2 {
+    margin-left: 1em;
+  }
+
+  main section .meestBekeken p {
+    margin-left: 1em;
+  }
+
 
   /* Breakpoint 2 Desktop */
   @media (min-width: 60em) {

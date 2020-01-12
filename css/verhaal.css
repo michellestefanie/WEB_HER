@@ -241,16 +241,18 @@ main section h3 {
 
 main section form {
   margin-top: 1em;
-  color: #8e1f81;
+  color: #99258d;
   font-size: 1em;
   margin-left: 5%;
-  margin-bottom: 5em;
 }
 
 main section button {
+  background-color: #99258d;
+  color: #fff;
   width: 10%;
-  margin-left: 5%;
-  margin-top: 1.5em;
+  height: 3em;
+  border-radius: .2em;
+  margin-left: 0;
 }
 
 /* Button review plaatsen */
@@ -269,6 +271,93 @@ main section button {
 .verhaal {
   display: block;
 }
+
+/* Button liken */
+main section.like-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main section.like-button.animated {
+  -webkit-animation: pop 0.9s both;
+  animation: pop 0.9s both;
+}
+main section.like-button svg {
+  opacity: 1;
+}
+
+.like-button svg path {
+  fill: #000;
+  transition: fill .4s ease-out;
+}
+
+.like-button.active svg path {
+  fill: #99258d;
+}
+
+
+@-webkit-keyframes pop {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+  30% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+    transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+    transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+    transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    -webkit-transform: scale3d(0.95, 1.05, 1);
+    transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+    transform: scale3d(1.05, 0.95, 1);
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes pop {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+  30% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+    transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+    transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+    transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    -webkit-transform: scale3d(0.95, 1.05, 1);
+    transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+    transform: scale3d(1.05, 0.95, 1);
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
 
 /* Buttons  Downloaden en Favorieten */
 .buttonVerhaal {
