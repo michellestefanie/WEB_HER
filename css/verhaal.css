@@ -1,0 +1,334 @@
+/* algemeen */
+body {
+  font-family: helvetica, sans-serif;
+  background-color: #fff;
+  scroll-behavior: smooth;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+/* Header */
+/* Bron: */
+header {
+  background-color: #fff;
+  padding: 1.25em 2.5em;
+  /* 20/16 */
+  /* 40/16 */
+  height: 5em;
+  /* 80/16 */
+  color: #fff;
+  box-sizing: border-box;
+  top: -6.25em;
+  /* 100/16 */
+  -webkit-transition: top 0.3s;
+  transition: top 0.3s;
+}
+
+header .header-inhoud {
+  max-width: 75em;
+  /* 1200/16 */
+  text-align: center;
+  margin: 0 auto;
+}
+
+/*  The header placeholder. It is displayed when the header is fixed to the top of the
+  browser window, in order to prevent the content of the page from jumping up. */
+header-placeholder {
+  height: 5em;
+  /* 80/16 */
+  display: none;
+}
+
+/* Logo */
+header .header-inhoud h1 {
+  float: left;
+  font: normal 1.75em Cookie, Helvetica, sans-serif;
+  /* 28/16 */
+  line-height: 2.5em;
+  /* 40/16 */
+  margin: 0;
+}
+
+header .header-inhoud h1 span {
+  color: #99258d;
+  text-transform: lowercase;
+  font-weight: 100;
+}
+
+/* The navigation links */
+header .header-inhoud a {
+  color: #99258d;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+header .header-inhoud nav {
+  font: 1em helvetica, sans-serif;
+  /* 16/16 */
+  line-height: 2.5em;
+  /* 40/16 */
+  float: right;
+}
+
+header .header-inhoud nav a {
+  display: inline-block;
+  text-decoration: none;
+  padding: 1em;
+  color: #99258d;
+  text-transform: uppercase;
+  font-weight: lighter;
+  opacity: 0.9;
+}
+
+header .header-inhoud nav a:hover {
+  opacity: 1;
+}
+
+header .header-inhoud nav a.selected {
+  color: #99258d;
+  pointer-events: none;
+  opacity: 1;
+}
+
+/* Fixed version of the header */
+body.fixed header {
+  padding: 0.625em 2.5em;
+  /* 10/16 */
+  /* 40/16 */
+  height: 3.125em;
+  /* 50/16 */
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+body.fixed header-placeholder {
+  display: block;
+}
+
+body.fixed header .header-inhoud h1 {
+  font-size: 1.5em;
+  /* 24/16 */
+  line-height: 1.875em;
+  /* 30/16 */
+}
+
+body.fixed header .header-inhoud nav {
+  line-height: 1.75em;
+  /* 28/16 */
+  font-size: 0.8125em;
+  /* 13/16 */
+}
+
+/* Making the header responsive */
+@media all and (max-width: 37.5em) {
+
+  /* 600/16 */
+  header {
+    padding: 1.25em 0;
+    /* 20/16 */
+    height: 4.6875em;
+    /* 75/16 */
+  }
+
+  header .header-inhoud h1 {
+    float: none;
+    margin: -0.5em 0 0.625em;
+    /* 8/16 */
+    /* 10/16 */
+    text-align: center;
+    font-size: 1.5em;
+    /* 24/16 */
+    line-height: 1;
+  }
+
+  header .header-inhoud nav {
+    line-height: 1;
+    float: none;
+  }
+
+  header .header-inhoud nav a {
+    font-size: 0.8125em;
+    /* 13/16 */
+  }
+
+  body.fixed header {
+    display: none;
+  }
+}
+
+/* Main */
+main input {
+  height: 2em;
+  width: 50%;
+  margin-top: 1em;
+  margin-left: 1em;
+  color: #99258d;
+  background-color: #fff;
+}
+
+main button {
+  height: 2em;
+  width: 50%;
+  margin-top: 1em;
+  margin-left: 1em;
+  color: #99258d;
+  background-color: #fff;
+}
+
+main button:hover {
+  background-color: #99258d;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: all .3s;
+}
+
+.Filters {
+  display: none;
+  padding: 0;
+  margin: 0;
+}
+
+.block {
+  display: block;
+}
+
+/* Verhaal */
+main .verhaal img {
+  width: 100%;
+  margin-top: 5em;
+}
+
+/* Tekst */
+main section h1 {
+  font-size: 1em;
+  color: #99258d;
+  margin-left: 5%;
+  margin-top: 2em;
+  margin-bottom: 0.5em;
+  padding: 0;
+}
+
+main section h2 {
+  font-size: 0.8em;
+  font-weight: normal;
+  color: #2b4040;
+  margin-left: 5%;
+  margin-bottom: 0.5em;
+  padding: 0;
+}
+
+main section h3 {
+  font-size: 0.8em;
+  font-weight: lighter;
+  color: #2b4040;
+  margin-left: 5%;
+  margin-bottom: 0.5em;
+  padding: 0;
+}
+
+main section form {
+  margin-top: 1em;
+  color: #8e1f81;
+  font-size: 1em;
+  margin-left: 5%;
+  margin-bottom: 5em;
+}
+
+main section button {
+  width: 10%;
+  margin-left: 5%;
+  margin-top: 1.5em;
+}
+
+/* Button review plaatsen */
+.scroll {
+  background-color: #99258d;
+  color: #fff;
+  width: 20%;
+  height: 3em;
+  border-radius: .2em;
+  margin-left: 5%;
+  margin-top: 2em;
+  position: absolute;
+  left: 0;
+}
+
+.verhaal {
+  display: block;
+}
+
+/* Buttons  Downloaden en Favorieten */
+.buttonVerhaal {
+  display: flex;
+  justify-content: space-around;
+  width: 8em;
+  position: absolute;
+  margin-left: 25%;
+  margin-top: 1.5em;
+}
+
+.buttonVerhaal a img {
+  width: 2em;
+  height: 2em;
+}
+
+/* Footer */
+footer {
+  background-color: #F4EEE8;
+  width: 100%;
+  margin: 0;
+}
+
+footer ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer li {
+  margin: 1em;
+  display: flex;
+  height: 50px;
+  width: 50px;
+  transition: all .4s ease-in-out;
+}
+
+footer img {
+  width: 50%;
+  margin-top: 1em;
+}
+
+/* Breakpoint 1 Mobiel/Tablet */
+@media only screen and (max-width: 50em) {
+  img[src="images/desktop.png"] {
+    display: none;
+  }
+
+  gif[src="images/tablet.png"] {
+    width: 100%;
+  }
+}
+
+/* Breakpoint 2 Tablet/Desktop */
+@media only screen and (min-width: 50em) {
+  img[src="images/tablet.png"] {
+    display: none;
+  }
+
+  img[src="images/desktop.png"] {
+    width: 100%;
+  }
+}
