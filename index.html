@@ -16,7 +16,10 @@
 <body>
   <header>
     <div class="header-inhoud">
-      <h1><a href="#">WOW<span>Verhalen</span></a></h1>
+      <a href="#">
+        <img src=""/>
+        <!-- LOGO TOEVOEGEN -->
+      </a>
       <nav>
         <a href="#">Favorieten</a>
         <a href="#">Downloads</a>
@@ -30,21 +33,47 @@
       <button type="button">Filteren</button>
       <div class="filters">
         <form action="index.html">
-          <p>Categorie</p>
-          <ul>
-            <li><input type="checkbox" name="Drama" value="Drama">Drama (15)</li>
-            <li><input type="checkbox" name="Fictie" value="Fictie">Fictie (6)</li>
-            <li><input type="checkbox" name="Geschiedenis" value="Geschiedenis">Geschiedenis (3)</li>
-            <li><input type="checkbox" name="Grappig" value="Grappig">Grappig (23)</li>
-            <li><input type="checkbox" name="Informatief" value="Geschiedenis">Informatief (26)<br></li>
-            <li><input type="checkbox" name="Kids" value="Kids">Kids (4)</li>
-            <li><input type="checkbox" name="Poezië" value="Poezië">Poezië (13)</li>
-            <li><input type="checkbox" name="Spanning" value="Spanning">Spanning (9)</li>
-          </ul>
+          <fieldset>
+            <legend>Kies een categorie</legend>
+            <ul>
+              <li>
+                <label for="drama">Drama (15)</label>
+                <input type="checkbox" name="drama" value="drama" id="drama">
+              </li>
+              <li>
+                <label for="fictie">Fictie (6)</label>
+                <input type="checkbox" name="fictie" value="fictie" id="fictie">
+              </li>
+              <li>
+                <label for="geschiedenis">Geschiedenis (3)</label>
+                <input type="checkbox" name="geschiedenis" value="geschiedenis" id="geschiedenis">
+              </li>
+              <li>
+                <label for="grappig">Grappig (23)</label>
+                <input type="checkbox" name="grappig" value="grappig" id="grappig">
+              </li>
+              <li>
+                <label for="informatief">Informatief (26)</label>
+                <input type="checkbox" name="informatief" value="informatief" id="informatief">
+              </li>
+              <li>
+                <label for="kids">Kids (4)</label>
+                <input type="checkbox" name="kids" value="kids" id="kids">
+              </li>
+              <li>
+                <label for="poëzie">Poëzie (13)</label>
+                <input type="checkbox" name="poëzie" value="poëzie" id="poëzie">
+              </li>
+              <li>
+                <label for="spanning">Spanning (9)</label>
+                <input type="checkbox" name="spanning" value="spanning" id="spanning">
+              </li>
+            </ul>
+          </fieldset>
 
-          <P>Leestijd</P>
-          <input type="range" min="1" max="100" value="0" class="slider">
-          <p>1 min - 5 min</p>
+          <label for="leesduur">Leestijd</label>
+          <input type="range" min="1" max="100" value="0" class="slider" name="leesduur">
+          <span>1 min - 5 min</span>
 
           <a href="index.html">
             <button type="button">Zoek verhalen</button>
@@ -54,26 +83,26 @@
     </section>
 
     <section>
-      <p>Welkom op de WOW air verhalen website.</p>
+      <h1>Welkom op de WOW air verhalen website.</h1>
       <p>Bekijk en droom weg in de mooiste WOW verhalen!</p>
     </section>
     <section>
-      <h1>Verhalen</h1>
+      <h2>Verhalen</h2>
       <div class="verhalen">
         <article>
           <a href="verhaal.html">
             <span>Leesduur: 4 min</span>
             <span>★★★☆☆</span>
-            <h2>Doof</h2>
+            <h3>Doof</h3>
             <p>Drama</p>
-            <img src="images/Doof.jpg" alt="Doof">
+            <img src="images/doof.jpg" alt="Doof">
           </a>
         </article>
         <article>
           <a href="verhaal.html">
             <span>Leesduur: 3 min</span>
             <span>★★★★☆</span>
-            <h2>Leon de Winter</h2>
+            <h3>Leon de Winter</h3>
             <p>Informatief</p>
             <img src="images/leondewinter.png" alt="">
           </a>
@@ -82,7 +111,7 @@
           <a href="verhaal.html">
             <span>Leesduur: 3 min</span>
             <span>★★★☆☆</span>
-            <h2>De presentator die ten onrechte denkt aansluiting te hebben gevonden bij 'de kids'</h2>
+            <h3>De presentator die ten onrechte denkt aansluiting te hebben gevonden bij 'de kids'</h3>
             <p>Drama</p>
             <img src="images/depresentator.png" alt="">
           </a>
@@ -91,43 +120,43 @@
           <a href="verhaal.html">
             <span>Leesduur: 2 min</span>
             <span>★★★☆☆</span>
-            <h2>Nichterig</h2>
+            <h3>Nichterig</h3>
             <p>Grappig</p>
-            <img src="images/Nichterig.png" alt="">
+            <img src="images/nichterig.png" alt="">
           </a>
         </article>
         <article>
           <a href="verhaal.html">
             <span>Leesduur: 4 min</span>
             <span>★★☆☆☆</span>
-            <h2>Eric Lucassen</h2>
+            <h3>Eric Lucassen</h3>
             <p>Drama</p>
-            <img src="images/rosakoopman-ericlucassen.jpg" alt="">
+            <img src="images/ericlucassen.jpg" alt="">
           </a>
         </article>
         <article>
           <a href="verhaal.html">
             <span>Leesduur: 3 min</span>
             <span>★★★★☆</span>
-            <h2>Onomatopee</h2>
+            <h3>Onomatopee</h3>
             <p>Kids</p>
-            <img src="images/Onomatopee.jpg" alt="">
+            <img src="images/onomatopee.jpg" alt="">
           </a>
         </article>
         <article>
           <a href="verhaal.html">
             <span>Leesduur: 2 min</span>
             <span>★★★☆☆</span>
-            <h2>Alzheimer</h2>
+            <h3>Alzheimer</h3>
             <p>Drama</p>
-            <img src="images/Alzheimer.jpg" alt="Doof">
+            <img src="images/alzheimer.jpg" alt="Doof">
           </a>
         </article>
         <article>
           <a href="verhaal.html">
             <span>Leesduur: 3 min</span>
             <span>★★★★☆</span>
-            <h2>Interview</h2>
+            <h3>Interview</h3>
             <p>Informatief</p>
             <img src="images/interview.jpg" alt="">
           </a>
@@ -136,7 +165,7 @@
           <a href="verhaal.html">
             <span>Leesduur: 3 min</span>
             <span>★★☆☆☆</span>
-            <h2>Martin Bril</h2>
+            <h3>Martin Bril</h3>
             <p>Informatief</p>
             <img src="images/martinbril.jpg" alt="">
           </a>
@@ -145,7 +174,7 @@
           <a href="verhaal.html">
             <span>Leesduur: 2 min</span>
             <span>★★★☆☆</span>
-            <h2>Charlie Sheen</h2>
+            <h3>Charlie Sheen</h3>
             <p>Grappig</p>
             <img src="images/overdreven.jpg" alt="">
           </a>
@@ -154,7 +183,7 @@
           <a href="verhaal.html">
             <span>Leesduur: 2 min</span>
             <span>★★★☆☆</span>
-            <h2>Eric Lucassen</h2>
+            <h3>Eric Lucassen</h3>
             <p>Grappig</p>
             <img src="images/jobcohen.jpg" alt="">
           </a>
@@ -163,31 +192,31 @@
           <a href="verhaal.html">
             <span>Leesduur: 2 min</span>
             <span>★★★★☆</span>
-            <h2>Lepra</h2>
+            <h3>Lepra</h3>
             <p>Spanning</p>
-            <img src="images/Lepra.jpg" alt="">
+            <img src="images/lepra.jpg" alt="">
           </a>
         </article>
       </div>
     </section>
 
     <section>
-      <h1>Voorgestelde verhalen</h1>
+      <h2>Voorgestelde verhalen</h2>
       <div class="voorgesteldeVerhalen">
         <article>
           <a href="verhaal.html">
             <span>Leesduur: 4 min</span>
             <span>★★★☆☆</span>
-            <h2>Doof</h2>
+            <h3>Doof</h3>
             <p>Drama</p>
-            <img src="images/Doof.jpg" alt="Doof">
+            <img src="images/doof.jpg" alt="Doof">
           </a>
         </article>
         <article>
           <a href="verhaal.html">
             <span>Leesduur: 3 min</span>
             <span>★★★★☆</span>
-            <h2>Leon de Winter</h2>
+            <h3>Leon de Winter</h3>
             <p>Informatief</p>
             <img src="images/leondewinter.png" alt="">
           </a>
@@ -196,7 +225,7 @@
           <a href="verhaal.html">
             <span>Leesduur: 3 min</span>
             <span>★★★☆☆</span>
-            <h2>De presentator die ten onrechte denkt aansluiting te hebben gevonden bij 'de kids'</h2>
+            <h3>De presentator die ten onrechte denkt aansluiting te hebben gevonden bij 'de kids'</h3>
             <p>Drama</p>
             <img src="images/depresentator.png" alt="">
           </a>
@@ -205,9 +234,9 @@
           <a href="verhaal.html">
             <span>Leesduur: 2 min</span>
             <span>★★★☆☆</span>
-            <h2>Nichterig</h2>
+            <h3>Nichterig</h3>
             <p>Grappig</p>
-            <img src="images/Nichterig.png" alt="">
+            <img src="images/nichterig.png" alt="">
           </a>
         </article>
 
@@ -215,13 +244,13 @@
     </section>
 
     <section>
-      <h1>Meest bekeken</h1>
+      <h2>Meest bekeken</h2>
       <div class="meestBekeken">
         <article>
           <a href="verhaal.html">
             <span>Leesduur: 3 min</span>
             <span>★★☆☆☆</span>
-            <h2>Martin Bril</h2>
+            <h3>Martin Bril</h3>
             <p>Informatief</p>
             <img src="images/martinbril.jpg" alt="">
           </a>
@@ -230,7 +259,7 @@
           <a href="verhaal.html">
             <span>Leesduur: 2 min</span>
             <span>★★★☆☆</span>
-            <h2>Charlie Sheen</h2>
+            <h3>Charlie Sheen</h3>
             <p>Grappig</p>
             <img src="images/overdreven.jpg" alt="">
           </a>
@@ -239,7 +268,7 @@
           <a href="verhaal.html">
             <span>Leesduur: 2 min</span>
             <span>★★★☆☆</span>
-            <h2>Eric Lucassen</h2>
+            <h3>Eric Lucassen</h3>
             <p>Grappig</p>
             <img src="images/jobcohen.jpg" alt="">
           </a>
@@ -248,9 +277,9 @@
           <a href="verhaal.html">
             <span>Leesduur: 2 min</span>
             <span>★★★★☆</span>
-            <h2>Lepra</h2>
+            <h3>Lepra</h3>
             <p>Spanning</p>
-            <img src="images/Lepra.jpg" alt="">
+            <img src="images/lepra.jpg" alt="">
           </a>
         </article>
 
@@ -266,8 +295,6 @@
       <li><a href="https://www.instagram.com/wowair/?hl=nl" target="_blank"><img src="images/instagram.svg" alt="Instagram"></a></li>
       <li><a href="https://twitter.com/wow_air" target="_blank"><img src="images/twitter.svg" alt="Twitter"></a></li>
     </ul>
-
-
   </footer>
 
   <script type="text/javascript" src="js/script.js"></script>

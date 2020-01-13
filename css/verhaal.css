@@ -187,13 +187,13 @@ main button {
   background-color: #fff;
 }
 
-main button:hover {
+/* main button:hover {
   background-color: #99258d;
   color: #fff;
   border: none;
   cursor: pointer;
   transition: all .3s;
-}
+} */
 
 .Filters {
   display: none;
@@ -272,92 +272,6 @@ main section button {
   display: block;
 }
 
-/* Button liken */
-main section.like-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-main section.like-button.animated {
-  -webkit-animation: pop 0.9s both;
-  animation: pop 0.9s both;
-}
-main section.like-button svg {
-  opacity: 1;
-}
-
-.like-button svg path {
-  fill: #000;
-  transition: fill .4s ease-out;
-}
-
-.like-button.active svg path {
-  fill: #99258d;
-}
-
-
-@-webkit-keyframes pop {
-  0% {
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
-  }
-  30% {
-    -webkit-transform: scale3d(1.25, 0.75, 1);
-    transform: scale3d(1.25, 0.75, 1);
-  }
-  40% {
-    -webkit-transform: scale3d(0.75, 1.25, 1);
-    transform: scale3d(0.75, 1.25, 1);
-  }
-  50% {
-    -webkit-transform: scale3d(1.15, 0.85, 1);
-    transform: scale3d(1.15, 0.85, 1);
-  }
-  65% {
-    -webkit-transform: scale3d(0.95, 1.05, 1);
-    transform: scale3d(0.95, 1.05, 1);
-  }
-  75% {
-    -webkit-transform: scale3d(1.05, 0.95, 1);
-    transform: scale3d(1.05, 0.95, 1);
-  }
-  100% {
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
-  }
-}
-
-@keyframes pop {
-  0% {
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
-  }
-  30% {
-    -webkit-transform: scale3d(1.25, 0.75, 1);
-    transform: scale3d(1.25, 0.75, 1);
-  }
-  40% {
-    -webkit-transform: scale3d(0.75, 1.25, 1);
-    transform: scale3d(0.75, 1.25, 1);
-  }
-  50% {
-    -webkit-transform: scale3d(1.15, 0.85, 1);
-    transform: scale3d(1.15, 0.85, 1);
-  }
-  65% {
-    -webkit-transform: scale3d(0.95, 1.05, 1);
-    transform: scale3d(0.95, 1.05, 1);
-  }
-  75% {
-    -webkit-transform: scale3d(1.05, 0.95, 1);
-    transform: scale3d(1.05, 0.95, 1);
-  }
-  100% {
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
-  }
-}
-
 
 /* Buttons  Downloaden en Favorieten */
 .buttonVerhaal {
@@ -372,6 +286,17 @@ main section.like-button svg {
 .buttonVerhaal a img {
   width: 2em;
   height: 2em;
+}
+
+.buttonVerhaal button {
+  width: 2em;
+  height: 2em;
+  background-color: rgba(0,0,0,0);
+}
+
+.buttonVerhaal img {
+  height: 100%;
+  width: auto;
 }
 
 /* Footer */

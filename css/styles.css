@@ -309,7 +309,7 @@ main section .verhalen span:first-child {
   margin-bottom: 5em;
 }
 
-main section .verhalen h2 {
+main section .verhalen h3 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -359,7 +359,7 @@ main section .verhalen article:hover span {
   transform: translateY(0);
 }
 
-main section .verhalen article:hover h2 {
+main section .verhalen article:hover h3 {
   opacity: 1;
   transform: translateY(0);
 }
@@ -401,7 +401,7 @@ main section .voorgesteldeVerhalen img {
   transition: all .6s;
 }
 
-main section .voorgesteldeVerhalen span {
+main section .voorgesteldeVerhalen span{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -427,7 +427,7 @@ main section .voorgesteldeVerhalen span:first-child {
   margin-bottom: 5em;
 }
 
-main section .voorgesteldeVerhalen h2 {
+main section .voorgesteldeVerhalen h3 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -477,7 +477,7 @@ main section .voorgesteldeVerhalen article:hover span {
   transform: translateY(0);
 }
 
-main section .voorgesteldeVerhalen article:hover h2 {
+main section .voorgesteldeVerhalen article:hover h3 {
   opacity: 1;
   transform: translateY(0);
 }
@@ -545,7 +545,7 @@ main section .meestBekeken span:first-child {
   margin-bottom: 5em;
 }
 
-main section .meestBekeken h2 {
+main section .meestBekeken h3 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -595,7 +595,7 @@ main section .meestBekeken article:hover span {
   transform: translateY(0);
 }
 
-main section .meestBekeken article:hover h2 {
+main section .meestBekeken article:hover h3 {
   opacity: 1;
   transform: translateY(0);
 }
@@ -608,6 +608,32 @@ main section .meestBekeken article:hover p {
 main section .meestBekeken article:hover a img {
   transform: translateY(-10%);
   z-index: -10;
+}
+
+/* Niet fucken met deze code */
+form ul {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(8, 1fr);
+  grid-column-gap: 1rem;
+  grid-row-gap: 1rem;
+  padding-left: 0.5rem;
+}
+
+form ul li {
+  display: flex;
+  flex-direction: row-reverse;
+  align-self: flex-end;
+  justify-content: flex-end;
+}
+
+fieldset {
+    border: 0;
+    padding: 1rem 0;
+}
+
+legend {
+  padding: 1rem 0;
 }
 
 /* Footer */
