@@ -1,0 +1,758 @@
+/* algemeen */
+body {
+  font-family: helvetica, sans-serif;
+  background-color: #fff;
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+/* header */
+/* bron: https://codepen.io/ctedesco02/pen/rrRVQV */
+header {
+  background-color: #fff;
+  padding: 1.25em 2.5em;
+  height: 5em;
+  color: #fff;
+  box-sizing: border-box;
+  top: -6.25em;
+  -webkit-transition: top 0.3s;
+  transition: top 0.3s;
+}
+
+header .header-inhoud {
+  max-width: 75em;
+  text-align: center;
+  margin: 0 auto;
+}
+
+/*  The header placeholder. It is displayed when the header is fixed to the top of the
+  browser window, in order to prevent the content of the page from jumping up. */
+header-placeholder {
+  height: 5em;
+  display: none;
+}
+
+/* Logo */
+header .header-inhoud img {
+  position: absolute;
+  left: 5em;
+  height: 4em;
+  margin: 0;
+}
+
+/* The navigation links */
+header .header-inhoud a {
+  color: #99258d;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+header .header-inhoud nav {
+  font: 1em helvetica, sans-serif;
+  /* 16/16 */
+  line-height: 2.5em;
+  /* 40/16 */
+  position: absolute;
+  right: 3.5em;
+
+}
+
+header .header-inhoud nav a {
+  display: inline-block;
+  text-decoration: none;
+  padding: 1em;
+  color: #99258d;
+  text-transform: uppercase;
+  font-weight: lighter;
+  opacity: 0.9;
+}
+
+header .header-inhoud nav a:hover {
+  opacity: 1;
+}
+
+header .header-inhoud nav a.selected {
+  color: #99258d;
+  pointer-events: none;
+  opacity: 1;
+}
+
+/* Fixed version of the header */
+body.fixed header {
+  padding: 0.625em 2.5em;
+  /* 10/16 */
+  /* 40/16 */
+  height: 3.125em;
+  /* 50/16 */
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+body.fixed header-placeholder {
+  display: block;
+}
+
+body.fixed header .header-inhoud h1 {
+  font-size: 1.5em;
+  /* 24/16 */
+  line-height: 1.875em;
+  /* 30/16 */
+}
+
+body.fixed header .header-inhoud nav {
+  line-height: 1.75em;
+  /* 28/16 */
+  font-size: 0.8125em;
+  /* 13/16 */
+}
+
+/*Filteren*/
+main button {
+  height: 2em;
+  width: 20%;
+  display: flex;
+  border-radius: .2em;
+  border: solid 1;
+  border-color: #99258d;
+  background-color: #fff;
+  color: #99258d;
+}
+
+main button:hover {
+  background-color: #99258d;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: all .3s;
+}
+
+/* */
+main section p {
+  font-size: 1em;
+  color: #2b4040;
+  margin-left: 1em;
+  width: 50%;
+  height: 0.5em;
+}
+
+section button {
+  margin-top: 2em;
+  margin-left: 1em;
+  width: 10%;
+}
+
+/* Filters */
+.filters {
+  display: none;
+  font-size: 1em;
+  margin-bottom: 3em;
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Slider van https://www.w3schools.com/howto/howto_js_rangeslider.asp */
+.slider {
+  -webkit-appearance: none;
+  width: 15%;
+  height: .5em;
+  background: #99258d;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+  background: #2b4040;
+  cursor: pointer;
+}
+
+/* Home page verhalen */
+main section {
+  width: 100%;
+  margin-left: 5%;
+}
+
+main section h1 {
+  color: #99258d;
+  margin: 4em 1em 1em;
+  font-size: 1em;
+}
+
+main section h2 {
+  font-size: 1.1em;
+  color: #99258d;
+  margin-left: 1em;
+  margin-top: 2em;
+  margin-bottom: 0.5em;
+  padding: 0;
+}
+
+/* Verhalen */
+main section .verhalen article {
+  display: grid;
+  position: relative;
+  height: 10em;
+  width: 90%;
+  overflow: hidden;
+  margin-left: .2em;
+  margin-bottom: .3em;
+  transition: all .4s;
+}
+
+main section .verhalen a {
+  height: 100%;
+  width: 100%;
+}
+
+main section .verhalen img {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -10;
+  transition: all .6s;
+}
+
+main section .verhalen span {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #99258d;
+  font-size: .8em;
+  font-weight: 500;
+  text-shadow: 0.0625em 0.0625em 0.1875em rgba(0, 0, 0, 0.3);
+  /* 1/16 */
+  /* 1/16 */
+  /* 3/16 */
+  margin-left: 1em;
+  opacity: 0;
+  transform: translateY(-0.625em);
+  /* 10/16 */
+  transition: all .5s;
+  transition-delay: .2s;
+  margin: .5em;
+}
+
+main section .verhalen span:first-child {
+  border: none;
+  padding: 0;
+  margin-bottom: 5em;
+}
+
+main section .verhalen h3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #2b4040;
+  font-size: 0.8em;
+  font-weight: 700;
+  margin-left: 1em;
+  opacity: 0;
+  transform: translateY(-0.625em);
+  /* 10/16 */
+  transition: all .5s;
+  transition-delay: .2s;
+}
+
+main section .verhalen p {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #99258d;
+  font-size: .8em;
+  font-weight: 500;
+  text-shadow: 0.0625em 0.0625em 0.1875em rgba(0, 0, 0, 0.3);
+  /* 1/16 */
+  /* 1/16 */
+  /* 3/16 */
+  margin-left: 1em;
+  opacity: 0;
+  transform: translateY(-0.625em);
+  /* 10/16 */
+  transition: all .5s;
+  transition-delay: .2s;
+  margin: .5em;
+}
+
+main section .verhalen img {
+  display: grid;
+  object-fit: cover;
+  object-position: top;
+}
+
+main section .verhalen article:hover {
+  background-color: rgb(255, 255, 255, 0.9);
+}
+
+main section .verhalen article:hover span {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+main section .verhalen article:hover h3 {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+main section .verhalen article:hover p {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+main section .verhalen article:hover a img {
+  transform: translateY(-10%);
+  z-index: -10;
+}
+
+/* Voorgestelde verhalen */
+main section .voorgesteldeVerhalen article {
+  display: grid;
+  position: relative;
+  /* grid-template-columns: repeat(1, 1fr); */
+  height: 10em;
+  width: 90%;
+  overflow: hidden;
+  margin-left: .2em;
+  margin-bottom: .3em;
+  transition: all .4s;
+}
+
+main section .voorgesteldeVerhalen a {
+  height: 100%;
+  width: 100%;
+}
+
+main section .voorgesteldeVerhalen img {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -10;
+  transition: all .6s;
+}
+
+main section .voorgesteldeVerhalen span{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #99258d;
+  font-size: .8em;
+  font-weight: 500;
+  text-shadow: 0.0625em 0.0625em 0.1875em rgba(0, 0, 0, 0.3);
+  /* 1/16 */
+  /* 1/16 */
+  /* 3/16 */
+  margin-left: 1em;
+  opacity: 0;
+  transform: translateY(-0.625em);
+  /* 10/16 */
+  transition: all .5s;
+  transition-delay: .2s;
+  margin: .5em;
+}
+
+main section .voorgesteldeVerhalen span:first-child {
+  border: none;
+  padding: 0;
+  margin-bottom: 5em;
+}
+
+main section .voorgesteldeVerhalen h3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #2b4040;
+  font-size: 0.8em;
+  font-weight: 700;
+  margin-left: 1em;
+  opacity: 0;
+  transform: translateY(-0.625em);
+  /* 10/16 */
+  transition: all .5s;
+  transition-delay: .2s;
+}
+
+main section .voorgesteldeVerhalen p {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #99258d;
+  font-size: .8em;
+  font-weight: 500;
+  text-shadow: 0.0625em 0.0625em 0.1875em rgba(0, 0, 0, 0.3);
+  /* 1/16 */
+  /* 1/16 */
+  /* 3/16 */
+  margin-left: 1em;
+  opacity: 0;
+  transform: translateY(-0.625em);
+  /* 10/16 */
+  transition: all .5s;
+  transition-delay: .2s;
+  margin: .5em;
+}
+
+main section .voorgesteldeVerhalen img {
+  display: grid;
+  object-fit: cover;
+  object-position: top;
+}
+
+main section .voorgesteldeVerhalen article:hover {
+  background-color: rgb(255, 255, 255, 0.9);
+}
+
+main section .voorgesteldeVerhalen article:hover span {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+main section .voorgesteldeVerhalen article:hover h3 {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+main section .voorgesteldeVerhalen article:hover p {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+main section .voorgesteldeVerhalen article:hover a img {
+  transform: translateY(-10%);
+  z-index: -10;
+}
+
+/* Meest bekeken */
+main section .meestBekeken article {
+  display: grid;
+  position: relative;
+  /* grid-template-columns: repeat(1, 1fr); */
+  height: 10em;
+  width: 90%;
+  overflow: hidden;
+  margin-left: .2em;
+  margin-bottom: .3em;
+  transition: all .4s;
+}
+
+main section .meestBekeken a {
+  height: 100%;
+  width: 100%;
+}
+
+main section .meestBekeken img {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -10;
+  transition: all .6s;
+}
+
+main section .meestBekeken span {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #99258d;
+  font-size: .8em;
+  font-weight: 500;
+  text-shadow: 0.0625em 0.0625em 0.1875em rgba(0, 0, 0, 0.3);
+  /* 1/16 */
+  /* 1/16 */
+  /* 3/16 */
+  margin-left: 1em;
+  opacity: 0;
+  transform: translateY(-0.625em);
+  /* 10/16 */
+  transition: all .5s;
+  transition-delay: .2s;
+  margin: .5em;
+}
+
+main section .meestBekeken span:first-child {
+  border: none;
+  padding: 0;
+  margin-bottom: 5em;
+}
+
+main section .meestBekeken h3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #2b4040;
+  font-size: 0.8em;
+  font-weight: 700;
+  margin-left: 1em;
+  opacity: 0;
+  transform: translateY(-0.625em);
+  /* 10/16 */
+  transition: all .5s;
+  transition-delay: .2s;
+}
+
+main section .meestBekeken p {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #99258d;
+  font-size: .8em;
+  font-weight: 500;
+  text-shadow: 0.0625em 0.0625em 0.1875em rgba(0, 0, 0, 0.3);
+  /* 1/16 */
+  /* 1/16 */
+  /* 3/16 */
+  margin-left: 1em;
+  opacity: 0;
+  transform: translateY(-0.625em);
+  /* 10/16 */
+  transition: all .5s;
+  transition-delay: .2s;
+  margin: .5em;
+}
+
+main section .meestBekeken img {
+  display: grid;
+  object-fit: cover;
+  object-position: top;
+}
+
+main section .meestBekeken article:hover {
+  background-color: rgb(255, 255, 255, 0.9);
+}
+
+main section .meestBekeken article:hover span {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+main section .meestBekeken article:hover h3 {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+main section .meestBekeken article:hover p {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+main section .meestBekeken article:hover a img {
+  transform: translateY(-10%);
+  z-index: -10;
+}
+
+/* Niet fucken met deze code */
+form ul {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(8, 1fr);
+  grid-column-gap: 1rem;
+  grid-row-gap: 1rem;
+  padding-left: 0.5rem;
+}
+
+form ul li {
+  display: flex;
+  flex-direction: row-reverse;
+  align-self: flex-end;
+  justify-content: flex-end;
+}
+
+fieldset {
+    border: 0;
+    padding: 1rem 0;
+}
+
+legend {
+  padding: 1rem 0;
+}
+
+/* Footer */
+footer {
+  background-color: #F4EEE8;
+  width: 100%;
+  margin: 0;
+}
+
+footer ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer li {
+  margin: 1em;
+  display: flex;
+  height: 3.125em;
+  /* 50/16 */
+  width: 3.125em;
+  /* 50/16 */
+  transition: all .4s ease-in-out;
+}
+
+footer img {
+  width: 50%;
+  margin-top: 1em;
+}
+
+/*Responsive website */
+/* Making the header responsive */
+@media (max-width: 60em) {
+header .header-inhoud img {
+    position: absolute;
+    left: 2em;
+    height: 3em;
+    margin: 0;
+  }
+
+    header .header-inhoud nav {
+      right: 1em;
+    }
+
+    header .header-inhoud nav a {
+      font-size: 1em;
+    }
+
+    body.fixed header {
+      display: none;
+    }
+}
+
+/* Breakpoint 1 Tablet */
+@media (min-width: 30em) {
+  main section .verhalen {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 90%;
+    margin: 0;
+  }
+
+  main section .verhalen article {
+    width: 100%;
+    height: 13em;
+  }
+
+  main section .verhalen img {
+    width: 100%;
+    height: 100%;
+    margin: .5em;
+  }
+
+  main section .verhalen span {
+    margin-left: 1em;
+  }
+
+  main section .verhalen h2 {
+    margin-left: 1em;
+  }
+
+  main section .verhalen p {
+    margin-left: 1em;
+  }
+
+  main section .voorgesteldeVerhalen {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 90%;
+    margin: 0;
+  }
+
+  main section .voorgesteldeVerhalen article {
+    width: 100%;
+    height: 13em;
+  }
+
+  main section .voorgesteldeVerhalen img {
+    width: 100%;
+    height: 100%;
+    margin: .5em;
+  }
+
+  main section .voorgesteldeVerhalen span {
+    margin-left: 1em;
+  }
+
+  main section .voorgesteldeVerhalen h2 {
+    margin-left: 1em;
+  }
+
+  main section .voorgesteldeVerhalen p {
+    margin-left: 1em;
+  }
+
+  main section .meestBekeken {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 90%;
+    margin: 0;
+  }
+
+  main section .meestBekeken article {
+    width: 100%;
+    height: 13em;
+  }
+
+  main section .meestBekeken img {
+    width: 100%;
+    height: 100%;
+    margin: .5em;
+  }
+
+  main section .meestBekeken span {
+    margin-left: 1em;
+  }
+
+  main section .meestBekeken h2 {
+    margin-left: 1em;
+  }
+
+  main section .meestBekeken p {
+    margin-left: 1em;
+  }
+
+
+  /* Breakpoint 2 Desktop */
+  @media (min-width: 60em) {
+    main section .verhalen {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      max-width: 90%;
+      margin: 0;
+    }
+
+    main section .voorgesteldeVerhalen {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      max-width: 90%;
+      margin: 0;
+    }
+
+    main section .meestBekeken {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      max-width: 90%;
+      margin: 0;
+    }
+  }
